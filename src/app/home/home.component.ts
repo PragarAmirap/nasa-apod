@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import {HttpClient} from '@angular/common/http'
+import { formatDate } from '@angular/common';
 
 @Component({
   selector: 'app-home',
@@ -12,10 +13,12 @@ export class HomeComponent implements OnInit {
   urlForFetch:string=''
   apiurl: string='https://api.nasa.gov/planetary/apod?api_key=DEFyLIrqem0iApZ07nObhyOeoos6JrEISMy5afFR'
   data: any;
+  todayDate:string='';
   constructor(private http:HttpClient) { }
 
   ngOnInit(): void {
     this.getData();
+    this.todayDate= formatDate(new Date(), 'yyyy-MM-dd', 'en-IN')
   }
   
   getData(){

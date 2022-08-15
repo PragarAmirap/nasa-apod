@@ -52,6 +52,13 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
+    border: 2px solid black;
+    border-radius: 20px 10px;
+    transition: 0.3s;
+}
+.apod:hover{
+    box-shadow: 2px 2px 10px grey;
+    border-color: transparent;
 }
 .explan{
     position: relative;
@@ -59,13 +66,13 @@
     display: inline-block;
     padding: 20px;
     text-align: justify;
-    font-style: italic;
     font-size: 20px;
     border: 1px solid white;
     background-color: whitesmoke;
     margin: 20px;
     border-radius: 50px 20px;
     margin-bottom: 150px;
+    transition: 0.5s;
 }
 .explan:hover{
     box-shadow: 2px 2px 10px grey;
@@ -74,6 +81,12 @@
 .datepicker{
     position: relative;
     top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.form-control{
+    position: relative;
     width: 200px;
 }
 .descrip{
@@ -81,12 +94,13 @@
     top: 50px;
     text-align: center;
     font-size: 20px;
-    color: blue;
+    color: black;
 }
 .instruction{
     position: relative;
     top: 30px;
     text-align: center;
     font-size: 25px;
-    color: red;
+    color: black;
+    font-weight: bold;
 }
