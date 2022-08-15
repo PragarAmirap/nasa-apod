@@ -1,0 +1,21 @@
+<div class="banner">
+    <div class="cont">
+        <a href="https://www.nasa.gov/"><img src="../../assets/logo/nasa.png" alt="nasa-logo" width="300px"></a>
+        <h1>NASA</h1>
+        <div class="container">
+            <p>Welcome to the NASA API portal. The objective of this site is to make NASA data, including imagery, eminently accessible to application developers. This catalog focuses on broadly useful and user friendly APIs and does not hold every NASA API.</p>
+        </div>
+    </div>
+</div>
+<div class="main" >
+    <h1 class="title">Astronomical Picture Of the day {{data.date}}</h1>
+    <p class="descrip">Each day a different image of our fascinating universe is featured along with a brief explanation written by a professional astronomer.</p>
+    <p class="instruction">Pick a date from the date picker and exparience the Astronomy Picture of the Day</p>
+    <div id="date-picker-example" class="md-form md-outline input-with-post-icon datepicker" inline="true">
+        <input placeholder="Select date" type="date" id="example" class="form-control" [(ngModel)]="date" (change)="getData()">
+    </div>
+    <div class="media">
+        <img class="apod" width="400px" src="{{data.url}}" alt="">
+    </div>
+    <p class="explan">{{data.explanation}}</p>
+</div>
