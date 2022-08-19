@@ -47,6 +47,15 @@
 .media{
     position: relative;
     top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.image{
+    position: relative;
+}
+.video{
+    position: relative;
 }
 .apod{
     display: block;
